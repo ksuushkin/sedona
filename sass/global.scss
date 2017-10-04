@@ -1,0 +1,25 @@
+body {
+  font-family: "PTSans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: $font-small;
+  line-height: 24px;
+  color: $gray--darker;
+  background-color: $white;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
