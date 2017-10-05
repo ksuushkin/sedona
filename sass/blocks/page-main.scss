@@ -1,0 +1,14 @@
+.page-main__img {
+  min-height: 160px;
+  background: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  img {
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    width: 282px;
+    height: 214px;
+  }
+}
