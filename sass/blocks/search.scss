@@ -1,0 +1,28 @@
+.search {
+  padding-top: 30px;
+  padding-bottom: 48px;
+  text-align: center;
+}
+
+.search__subtitle {
+  margin: 0;
+  padding-left: 28px;
+  padding-right: 28px;
+  padding-bottom: 30px;
+  font-size: $font-large;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.search__lead {
+  margin: 0;
+  padding-bottom: 40px;
+  padding-left: 28px;
+  padding-right: 28px;
+  line-height: 24px;
+  color: $gray--darker;
+}
+ .search__link {
+  margin: 0 auto;
+  @include btn();
+ }

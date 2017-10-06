@@ -2,12 +2,14 @@
   text-align: center;
 }
 
-.promo__img{
+.promo__img {
+  position: relative;
   min-height: 390px;
   background: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
+
   img {
     display: block;
     margin-left:auto;
@@ -16,6 +18,20 @@
     width: 282px;
     height: 214px;
   }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 321px;
+    height: 30px;
+    bottom: 0;
+    left: 0;
+    background: url("../img/bg-intro-triangle-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    z-index:10;
+  }
 }
 
 .promo__slogan,
@@ -23,13 +39,18 @@
   font-size: $font-normal;
   font-weight: 700;
   line-height: 26px;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin: 0 auto;
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-bottom: 37px;
+  padding-top: 44px;
 }
 
 .promo__text {
   color: $gray--darker;
   line-height: 26px;
+  margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 32px;
 }

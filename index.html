@@ -46,17 +46,19 @@
         <p class="promo__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       </section>
 
-      <section class="reasons">
-        <h2 class="visually-hidden">Почему стоит ехать в седону?</h2>
-        <h3 class="reasons__title">
-          Настоящий городок
-        </h3>
-        <span class="reasons__num">— №1 —</span>
-        <p class="reasons__descr">
-          Седона не аттракцион для туристов, там течет своя жизнь
-        </p>
+      <section class="reasons reasons--triangle">
+        <div class="reasons__inner">
+          <h2 class="visually-hidden">Почему стоит ехать в седону?</h2>
+          <h3 class="reasons__title">
+            Настоящий городок
+          </h3>
+          <span class="reasons__num">— №1 —</span>
+          <p class="reasons__descr">
+            Седона не аттракцион для туристов, там течет своя жизнь
+          </p>
+        </div>
         <picture class="reasons__img">
-          <img src="http://placehold.it/320x260" alt="Настоящий городок">
+          <img src="img/main-city-mobile@1x.JPG" alt="Настоящий городок">
         </picture>
       </section>
 
@@ -79,16 +81,18 @@
       </section>
 
       <section class="reasons">
-        <h2 class="visually-hidden">Еще одна причина приехать в седону</h2>
-        <h3 class="reasons__title">
-          Там есть мостдьявола
-        </h3>
-        <span class="reasons__num">— №2 —</span>
-        <p class="reasons__descr">
-          Да, по нему можно пройти! Если вы осмелитесь, конечно
-        </p>
+        <div class="reasons__inner">
+          <h2 class="visually-hidden">Еще одна причина приехать в седону</h2>
+          <h3 class="reasons__title">
+            Там есть мостдьявола
+          </h3>
+          <span class="reasons__num">— №2 —</span>
+          <p class="reasons__descr">
+            Да, по нему можно пройти! Если вы осмелитесь, конечно
+          </p>
+        </div>
         <picture class="reasons__img">
-          <img src="http://placehold.it/320x260" alt="Мост дьявола">
+          <img src="img/photo-bridge-mobile@1x.JPG" alt="Мост дьявола">
         </picture>
       </section>
 
@@ -124,14 +128,15 @@
         <p class="search__lead">
           Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
         </p>
+        <a class="search__link" href="#">Найти гостиницу</a>
       </section>
       <div class="location">
-        Map
+        <div class="location__map"></div>
       </div>
     </main>
 
     <footer class="page-footer">
-      <p class="page-footer__hashtag"></p>
+      <p class="page-footer__hashtag">#visitsedona</p>
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
@@ -146,8 +151,10 @@
         </ul>
       </div>
       <div class="page-footer__copyright copyright">
-        <span class="copyright___text">Разработано</span>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"></a>
+        <span class="copyright__text">Разработано</span>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <img class="copyright__img" src="img/logo-htmlacademy.svg" width="27" height="34" alt="html-academy">
+        </a>
       </div>
     </footer>
   </body>
