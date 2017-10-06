@@ -12,6 +12,7 @@
   font-size: $font-large;
   font-weight: 700;
   line-height: 26px;
+  color: $black;
 }
 
 .search__lead {
@@ -20,9 +21,8 @@
   padding-left: 28px;
   padding-right: 28px;
   line-height: 24px;
-  color: $gray--darker;
 }
- .search__link {
+.search__link {
   margin: 0 auto;
   @include btn();
- }
+}

@@ -9,6 +9,7 @@
   font-weight: 700;
   font-size: $font-large;
   line-height: 26px;
+  color: $black;
 }
 
 .page-footer__social {
@@ -20,4 +21,6 @@
 .page-footer__copyright {
   width: 320px;
   margin: 0 auto;
+  color: $black;
+  margin-bottom: 30px;
 }
