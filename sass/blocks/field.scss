@@ -1,0 +1,22 @@
+.field__caption {
+  font-size: $font-normal;
+  font-weight: 700;
+  line-height: 26px;
+  padding-top: 23px;
+  margin-bottom: 25px;
+}
+
+.field__name {
+  margin-right: 14px;
+  line-height: 26px;
+  color: $gray--darker;
+}
+
+.field__input {
+
+  width: 100%;
+  padding-top: 14px;
+  padding-left: 22px;
+  padding-bottom: 14px;
+
+}
