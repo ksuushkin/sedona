@@ -1,9 +1,30 @@
+.field__inner {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 16px;
+  border-top: 1px solid $gray;
+}
+
+.field__item {
+  margin: 0;
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 4px;
+
+  &--inline {
+  display: flex;
+  align-items: center;
+  }
+}
+
 .field__caption {
+  text-align: center;
   font-size: $font-normal;
+  color: $black;
   font-weight: 700;
   line-height: 26px;
-  padding-top: 23px;
-  margin-bottom: 25px;
+  padding-top: 18px;
+  margin-bottom: 15px;
 }
 
 .field__name {
@@ -13,10 +34,16 @@
 }
 
 .field__input {
-
   width: 100%;
   padding-top: 14px;
-  padding-left: 22px;
+  padding-left: 21px;
   padding-bottom: 14px;
-
+  font-size: $font-normal;
+  font-weight: 700;
+  line-height: 26px;
+  color: $black;
+  background-color: $gray--lighter;
+  letter-spacing: -1px;
+  border: none;
+  outline: none;
 }

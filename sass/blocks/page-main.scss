@@ -1,17 +1,17 @@
 .page-main__img {
   position: relative;
-  min-height: 160px;
+  min-height: 158px;
   background: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: top;
   background-size: cover;
 
   img {
     display: block;
     margin-left:auto;
     margin-right:auto;
-    width: 282px;
-    height: 214px;
+    width: 230px;
+    height: 141px;
   }
 
   &::after {
