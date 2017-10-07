@@ -22,6 +22,7 @@
 }
 
 .reasons__inner--triangle {
+
   &::before {
     content: "";
     position: absolute;
@@ -66,6 +67,7 @@
   padding-bottom: 32px;
   padding-left: 31px;
   padding-right: 31px;
+
   &:not(:last-child) {
     border-bottom: 1px solid #d6d6d6;
   }

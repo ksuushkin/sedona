@@ -1,6 +1,7 @@
 .main-nav {
   position: relative;
   text-align: center;
+
   &__toggle {
     position: absolute;
     top: 16px;
@@ -37,12 +38,11 @@
   font-weight: 700;
   border-bottom: 1px solid #678fa8;
   border-top: 1px solid #9ac2db;
-}
 
-.main-nav__item a {
   &:hover {
     background-color: $blue--dark;
   }
+
   &:active {
     color: #88b6d1;
     background-color: $blue--darker;
