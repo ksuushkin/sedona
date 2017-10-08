@@ -1,0 +1,14 @@
+.modal {
+  text-align: center;
+}
+
+.modal__title {
+  font-size: $font-normal;
+  font-weight: 700;
+  line-height: 26px;
+  color: $black;
+}
+
+.modal__text {
+  line-height: 24px;
+}

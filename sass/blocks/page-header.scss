@@ -1,0 +1,17 @@
+.page-header {
+  width: 100%;
+}
+
+.page-header__logo-wrapper {
+  display: block;
+  position: relative;
+  padding-top: 56px;
+}
+
+.page-header__logo {
+  display: block;
+  position: absolute;
+  top: -1px;
+  left: 110px;
+  z-index: 10;
+}

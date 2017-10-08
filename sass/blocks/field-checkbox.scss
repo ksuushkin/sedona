@@ -1,0 +1,29 @@
+.field-checkbox__input {
+  width: 54px;
+  height: 54px;
+  opacity: 0;
+}
+
+.field-checkbox__name {
+  position: relative;
+}
+
+.field-checkbox__name-text {
+  text-transform: none;
+  font-family: $font-family;
+  font-size: $font-normal;
+  font-weight: 700;
+  line-height: 26px;
+  color: $black;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 54px;
+    height: 54px;
+    bottom: 0;
+    left: 0;
+    background-color: $gray--lighter;
+  }
+}

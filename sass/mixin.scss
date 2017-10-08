@@ -1,0 +1,28 @@
+@mixin btn() {
+  display: block;
+  box-sizing: border-box;
+  width: 280px;
+  min-height: 57px;
+  background-color: $blue;
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: $white;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+
+  &:hover {
+    background-color: $blue--dark;
+  }
+
+  &:active {
+    color: #88b6d1;
+    background-color: $blue--darker;
+  }
+
+  &:disabled {
+    background-color: $gray;
+  }
+}

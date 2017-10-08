@@ -3,11 +3,46 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Pixel Glass -->
+    <style>
+      HTML {
+        background-repeat: no-repeat;
+        background-position:  50% 0;
+        /* По умолчанию мобильный макет */
+        background-image: url( "pixel-img/sedona-form-mobile.jpg" );
+      }
+      /* Планшет */
+      @media ( min-width: 760px ) {
+        HTML {
+          /* Планшетный макет */
+          background-image: url( "pixel-img/sedona-form-mobile.jpg" );
+        }
+      }
+      /* Десктоп */
+      @media ( min-width: 960px ) {
+        HTML {
+          /* Десктопный макет */
+          background-image: url( "pixel-img/sedona-form-mobile.jpg" );
+        }
+      }
+
+      BODY {
+        opacity: .5;
+      }
+    </style>
+    <link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
+    <script src="../node_modules/pixel-glass/script.js"></script>
+    <!-- // Pixel Glass -->
+
 </head>
 <body class="page">
   <header class="page-header">
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--active">
             <a href="index.html">Главная</a>
@@ -23,16 +58,18 @@
           </li>
         </ul>
       </nav>
-      <a class="page-header__logo" href="index.html">
-        <img src="http://placehold.it/102x83" alt="City of Sedona">
-      </a>
+      <div class="page-header__logo-wrapper">
+        <a class="page-header__logo" href="index.html">
+          <img src="img/logo-sedona-mobile.svg" width="102" height="84" alt="City of Sedona">
+        </a>
+      </div>
     </header>
 
     <main class="page-main">
 
       <section class="promo">
         <div class="page-main__img">
-          <img src="http://placehold.it/320x158" alt="Welcome to Sedona">
+          <img src="img/text-sedona.svg" alt="Welcome to Sedona">
         </div>
           <h1 class="promo__title">Оставьте свой отзыв</h1>
           <p class="promo__text">
@@ -43,77 +80,111 @@
 
       <form class="form" action="https://echo.htmlacademy.ru/" method="post">
         <fieldset class="form__field field">
-          <legend class="field__caption">
-            Представьтесь:
-          </legend>
-          <label class="field__name" for="name">Имя*:</label>
-          <input class="field__input" id="name" type="text" placeholder="Петр">
-          <label class="field__name" for="surname">Фамилия*:</label>
-          <input class="field__input" id="surname" type="text" placeholder="Иванов">
-          <label class="field__name" for="patronymic">Отчество:</label>
-          <input class="field__input" id="patronymic" type="text" placeholder="Александрович">
+          <div class="field__inner">
+            <legend class="field__caption">
+              Представьтесь:
+            </legend>
+            <div class="field__item field__item--inline">
+              <label class="field__name" for="name">Имя*:</label>
+              <input class="field__input" id="name" type="text" placeholder="Петр">
+            </div>
+            <div class="field__item field__item--inline">
+              <label class="field__name" for="surname">Фамилия*:</label>
+              <input class="field__input" id="surname" type="text" placeholder="Иванов">
+            </div>
+            <div class="field__item field__item--inline">
+              <label class="field__name" for="patronymic">Отчество:</label>
+              <input class="field__input" id="patronymic" type="text" placeholder="Александрович">
+            </div>
+          </div>
+
         </fieldset>
 
         <fieldset class="form__field field">
-          <legend class="field__caption">
-            Контактная информация:
-          </legend>
-          <label class="field__name" for="tel">Контактный телефон*:</label>
-          <input class="field__input field__input--phone" id="tel" type="tel">
-          <label class="field__name" for="email">Электронная почта*:</label>
-          <input class="field__input field__input--email" id="email" type="email">
+          <div class="field__inner">
+            <legend class="field__caption">
+              Контактная информация:
+            </legend>
+            <div class="field__item">
+              <label class="field__name" for="tel">Контактный телефон*:</label>
+              <input class="field__input field__input--phone" id="tel" type="tel" placeholder="Введите телефон">
+            </div>
+            <div class="field__item">
+              <label class="field__name" for="email">Электронная почта*:</label>
+              <input class="field__input field__input--email" id="email" type="email" placeholder="Введите e-mail">
+            </div>
+          </div>
         </fieldset>
 
         <fieldset class="form__field field field-radio">
-          <legend class="field__caption">
-            Ваше общее впечатление:
-          </legend>
-          <label class="field-radio__name">
-            <input class="field-radio__input" type="radio" name="rating" checked>
-            <span class="field-radio__name-text">Скорее положительное</span>
-          </label>
-          <label class="field-radio__name">
-            <input class="field-radio__input" type="radio" name="rating">
-            <span class="field-radio__name-text">Скорее отрицательное</span>
-          </label>
-          <label class="field-radio__name">
-            <input class="field-radio__input" type="radio" name="rating">
-            <span class="field-radio__name-text">Затрудняюсь ответить</span>
-          </label>
+          <div class="field__inner">
+            <legend class="field__caption">
+              Ваше общее впечатление:
+            </legend>
+            <div class="field__item">
+              <label class="field-radio__name">
+                <input class="field-radio__input" type="radio" name="rating" checked>
+                <span class="field-radio__name-text">Скорее положительное</span>
+              </label>
+            </div>
+            <div class="field__item">
+              <label class="field-radio__name">
+                <input class="field-radio__input" type="radio" name="rating">
+                <span class="field-radio__name-text">Скорее отрицательное</span>
+              </label>
+            </div>
+            <div class="field__item">
+              <label class="field-radio__name">
+                <input class="field-radio__input" type="radio" name="rating">
+                <span class="field-radio__name-text">Затрудняюсь ответить</span>
+              </label>
+            </div>
+          </div>
         </fieldset>
 
         <fieldset class="form__field field field-checkbox">
-          <legend class="field__caption">
-            Посещенные достопримечательности:
-          </legend>
-          <label class="field-checkbox__name">
-            <input type="checkbox" class="field-radio__input" checked>
-            <span class="field-checkbox__name-text">Мост Дьявола</span>
-          </label>
-          <label class="field-checkbox__name">
-            <input type="checkbox" class="field-radio__input" checked>
-            <span class="field-checkbox__name-text">Слайд-парк</span>
-          </label>
-          <label class="field-checkbox__name">
-            <input type="checkbox" class="field-radio__input">
-            <span class="field-checkbox__name-text">Гора-Колокол</span>
-          </label>
-          <label class="field-checkbox__name">
-            <input type="checkbox" class="field-radio__input" checked>
-            <span class="field-checkbox__name-text">Красные скалы</span>
-          </label>
+          <div class="field__inner">
+            <legend class="field__caption">
+              Посещенные достопримечательности:
+            </legend>
+            <div class="field__item">
+              <label class="field-checkbox__name">
+                <input class="field-checkbox__input" type="checkbox" checked>
+                <span class="field-checkbox__name-text">Мост Дьявола</span>
+              </label>
+            </div>
+            <div class="field__item">
+              <label class="field-checkbox__name">
+                <input class="field-checkbox__input" type="checkbox" checked>
+                <span class="field-checkbox__name-text">Слайд-парк</span>
+              </label>
+            </div>
+            <div class="field__item">
+              <label class="field-checkbox__name">
+                <input class="field-checkbox__input" type="checkbox">
+                <span class="field-checkbox__name-text">Гора-Колокол</span>
+              </label>
+            </div>
+            <div class="field__item">
+              <label class="field-checkbox__name">
+                <input class="field-checkbox__input" type="checkbox" checked>
+                <span class="field-checkbox__name-text">Красные скалы</span>
+              </label>
+            </div>
+          </div>
         </fieldset>
 
         <fieldset class="form__field field field-text">
-          <legend class="field__caption">
-            Опишите свои эмоции
-          </legend>
-          <label class="field-text__name">
-            <textarea class="field-text__input" cols="30" rows="10">
-              Опишите подробно все свои восторги
-            </textarea>
-          </label>
+          <div class="field__inner">
+            <legend class="field__caption">
+              Опишите свои эмоции
+            </legend>
+            <label class="field-text__name">
+              <textarea class="field-text__input" cols="30" rows="10">Опишите подробно все свои восторги</textarea>
+            </label>
+          </div>
         </fieldset>
+
         <div class="form__actions">
           <button class="btn" type="submit">Отправить отзыв</button>
         </div>
@@ -136,8 +207,10 @@
         </ul>
       </div>
       <div class="page-footer__copyright copyright">
-        <span class="copyright___text">Разработано</span>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"></a>
+        <span class="copyright__text">Разработано</span>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <img class="copyright__img" src="img/logo-htmlacademy.svg" width="27" height="34" alt="html-academy">
+        </a>
       </div>
     </footer>
     <div class="modal">
