@@ -29,20 +29,25 @@
   min-height: 390px;
   background-position: bottom;
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: 321px;
-    height: 30px;
-    bottom: 0;
-    left: 0;
-    background: url("../img/bg-intro-triangle-mobile.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom center;
-    z-index: 10;
+  @media (min-width: $screen-md) {
+    min-height: 486px;
   }
 }
+
+.promo__img-inner--main::after {
+  content: "";
+  position: absolute;
+  width: 321px;
+  height: 30px;
+  bottom: 0;
+  left: 0;
+  background: url("../img/bg-intro-triangle-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  z-index: 10;
+}
+
 
 .promo__img {
   display: block;
@@ -50,11 +55,17 @@
   margin-right: auto;
   width: 230px;
   height: 141px;
+}
 
-  &--main {
+.promo__img--main {
   padding-top: 90px;
   width: 282px;
   height: 214px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 77px;
+    width: 458px;
+    height: 350px;
   }
 }
 

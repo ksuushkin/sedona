@@ -1,0 +1,7 @@
+.page-main {
+  margin-top: -35px;
+
+  @media (min-width: $screen-md) {
+    margin-top: 0;
+  }
+}

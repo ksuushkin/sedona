@@ -5,6 +5,13 @@
   padding-top: 40px;
   padding-right: 20px;
   list-style-type: none;
+
+  @media (min-width: $screen-md) {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .features__title {
@@ -14,9 +21,42 @@
   line-height: 26px;
   padding-bottom: 22px;
   color: $black;
+
+  @media (min-width: $screen-md) {
+    font-size: $font-large;
+  }
 }
 
 .features__descr {
   margin: 0;
   padding-bottom: 36px;
+
+  @media (min-width: $screen-md) {
+
+  }
+}
+
+.features__item {
+  @media (min-width: $screen-md) {
+    width: 33%;
+    text-align: center;
+  }
+}
+
+.features__item--house {
+  @media (min-width: $screen-md) {
+    order: 1;
+  }
+}
+
+.features__item--gift {
+  @media (min-width: $screen-md) {
+    order: 3;
+  }
+}
+
+.features__item--food {
+  @media (min-width: $screen-md) {
+    order: 2;
+  }
 }
