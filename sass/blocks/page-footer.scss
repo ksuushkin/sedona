@@ -3,11 +3,11 @@
   text-align: center;
   background-color: $white;
 
-   @media (min-width: $screen-md) {
+  @media (min-width: $screen-md) {
     display: flex;
     align-items: center;
     margin-bottom: 35px;
-   }
+  }
 }
 
 .page-footer__hashtag {
@@ -20,7 +20,7 @@
   @media (min-width: $screen-md) {
     width: 33.3%;
     margin: 0;
-   }
+  }
 }
 
 .page-footer__social {
@@ -31,7 +31,7 @@
   @media (min-width: $screen-md) {
     width: 33.3%;
     margin: 0;
-   }
+  }
 }
 
 .page-footer__copyright {
@@ -43,5 +43,5 @@
   @media (min-width: $screen-md) {
     width: 33.3%;
     margin: 0;
-   }
+  }
 }
