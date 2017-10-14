@@ -1,7 +1,6 @@
 .page-header {
   display: flex;
   flex-direction: column;
-  /*width: 100%;*/
 
   @media (min-width: $screen-md) {
     flex-direction: row;
@@ -13,7 +12,6 @@
   position: relative;
   align-self: center;
   z-index: 10;
-  /*padding-top: 56px;*/
 
   @media (min-width: $screen-md) {
     position: inherit;
@@ -23,9 +21,6 @@
 
 .page-header__logo {
   display: block;
-  /*position: absolute;
-  top: -1px;
-  left: 110px;*/
   z-index: 10;
 
   @media (min-width: $screen-md) {
@@ -33,6 +28,5 @@
     width: auto;
     left: 50%;
     transform: translateX(-50%);
-    /*background-color: transparent;*/
   }
 }
