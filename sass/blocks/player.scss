@@ -1,7 +1,30 @@
+.player {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 75px;
+  min-height: 200px;
+
+  @media (min-width: $screen-md) {
+    width: 648px;
+    min-height: 500px;
+  }
+
+  @media (min-width: $screen-md) {
+    width: 800px;
+    min-height: 500px;
+  }
+}
+
 .player__screen {
   width: 100%;
-  padding-top: 156px;
+  margin: 0 auto;
   background-image: url("../img/video-mobile@1x.jpg");
   background-position: top center;
   background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: $screen-md) {
+
+  }
 }

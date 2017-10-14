@@ -1,3 +1,10 @@
+.field-text {
+  @media (min-width: $screen-md) {
+    width: 100%;
+    order: 5;
+  }
+}
+
 .field-text__input {
   box-sizing: border-box;
   width: 100%;

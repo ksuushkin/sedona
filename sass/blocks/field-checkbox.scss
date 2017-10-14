@@ -1,3 +1,10 @@
+.field-checkbox {
+  @media (min-width: $screen-md) {
+    width: 100%;
+    order: 4;
+  }
+}
+
 .field-checkbox__input {
   width: 54px;
   height: 54px;
@@ -6,15 +13,19 @@
 
 .field-checkbox__name {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .field-checkbox__name-text {
+  margin-left: 10px;
   text-transform: none;
   font-family: $font-family;
   font-size: $font-normal;
   font-weight: 700;
   line-height: 26px;
   color: $black;
+  margin-left: 15px;
 
   &::before {
     content: "";

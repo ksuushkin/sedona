@@ -1,5 +1,18 @@
 .photo {
+  display: flex;
+  flex-direction: column;
   margin-top: 11px;
+
+  @media (min-width: $screen-md) {
+    max-width: 648px;
+    margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $screen-lg) {
+    max-width: 100%;
+  }
 }
 
 .photo__item {
@@ -9,19 +22,98 @@
   padding-bottom: 18px;
   border-bottom: 1px solid $gray;
 
+  @media (min-width: $screen-md) {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    background-color: $gray--light;
+  }
+
+  @media (min-width: $screen-lg) {
+    position: relative;
+    width: 33.33%;
+  }
+
   &:first-child {
     border-top: 1px solid $gray;
+
+    @media (min-width: $screen-md) {
+      width: 100%;
+    }
+  }
+}
+
+
+
+.photo__link {
+  display: block;
+  margin-bottom: 15px;
+
+  @media (min-width: $screen-md) {
+    margin: 0;
+  }
+}
+
+.photo__img {
+  display: block;
+
+  @media (min-width: $screen-md) {
+    width: 100%;
+    height: 268px;
+  }
+}
+
+.photo__img--large {
+  @media (min-width: $screen-md) {
+    height: 400px;
+  }
+}
+
+.photo__info {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $screen-md) {
+    flex-direction: row;
+    align-items: center;
+    min-height: 80px;
+  }
+
+  @media (min-width: $screen-lg) {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: $black;
+    opacity: 0.6;
+    color: $white;
+  }
+}
+
+.photo__info-inner {
+  @media (min-width: $screen-md) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
   }
 }
 
 .photo__title {
   margin: 0;
-  margin-top: 9px;
   margin-bottom: 1px;
   line-height: 24px;
   font-size: $font-small;
   font-weight: 700;
   color: $black;
+
+  @media (min-width: $screen-md) {
+    margin: 0;
+  }
+
+  @media (min-width: $screen-lg) {
+    color: $white;
+  }
 }
 
 .photo__author {
@@ -29,4 +121,16 @@
   margin-bottom: 4px;
   line-height: 24px;
   text-transform: none;
+
+  @media (min-width: $screen-md) {
+    margin: 0;
+    /*order: 3;*/
+  }
+}
+
+.photo__likes {
+  @media (min-width: $screen-md) {
+    margin-left: auto;
+    margin-right: 20px;
+  }
 }

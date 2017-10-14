@@ -15,17 +15,17 @@
         background-image: url( "pixel-img/sedona-photo-mobile.jpg" );
       }
       /* Планшет */
-      @media ( min-width: 760px ) {
+      @media ( min-width: 768px ) {
         HTML {
           /* Планшетный макет */
-          background-image: url( "pixel-img/sedona-photo-mobile.jpg" );
+          background-image: url( "pixel-img/sedona-photo-tablet.jpg" );
         }
       }
       /* Десктоп */
-      @media ( min-width: 960px ) {
+      @media ( min-width: 1200px ) {
         HTML {
           /* Десктопный макет */
-          background-image: url( "pixel-img/sedona-photo-mobile.jpg" );
+          background-image: url( "pixel-img/sedona-photo-desktop.jpg" );
         }
       }
 
@@ -80,51 +80,70 @@
 
       <section class="photo">
         <div class="photo__item">
-          <a class="photo__img" href="#">
-            <img src="../img/photo-sunset-mobile@1x.jpg" alt="Неродные просторы">
+          <a class="photo__link" href="#">
+            <img class="photo__img photo__img--large" src="../img/photo-sunset-mobile@1x.jpg" alt="Неродные просторы">
           </a>
-          <h3 class="photo__title">Неродные просторы</h3>
-          <p class="photo__author">Автор фото: Борис</p>
-          <div class="photo__likes likes">
-            <a class="likes__icon" href="#">
-<img src="img/icon-like.svg" alt="Палец вверх"></a>
-            <span class="likes__num">1350</span>
+          <div class="photo__info">
+            <div class="photo__info-inner">
+              <h3 class="photo__title">Неродные просторы</h3>
+              <p class="photo__author">Автор фото: Борис</p>
+            </div>
+            <div class="photo__likes likes">
+              <a class="likes__icon" href="#">
+                <img src="img/icon-like.svg" alt="Палец вверх"></a>
+              <span class="likes__num">1350</span>
+            </div>
           </div>
         </div>
+
         <div class="photo__item">
-          <a class="photo__img" href="#">
-            <img src="../img/photo-cactus-mobile@1x.jpg" alt="Местная растительность">
+          <a class="photo__link" href="#">
+            <img class="photo__img" src="../img/photo-cactus-mobile@1x.jpg" alt="Местная растительность">
           </a>
-          <h3 class="photo__title">Местная растительность</h3>
-          <p class="photo__author">Автор фото: Сергей</p>
-          <div class="photo__likes likes">
-            <a class="likes__icon" href="#">
-<img src="img/icon-like.svg" alt="Палец вверх"></a>
-            <span class="likes__num">143</span>
+          <div class="photo__info">
+            <div class="photo__info-inner">
+              <h3 class="photo__title">Местная растительность</h3>
+              <p class="photo__author">Автор фото: Сергей</p>
+            </div>
+            <div class="photo__likes likes">
+              <a class="likes__icon" href="#">
+                <img src="img/icon-like.svg" alt="Палец вверх"></a>
+              <span class="likes__num">143</span>
+            </div>
           </div>
         </div>
+
         <div class="photo__item">
-          <a class="photo__img" href="#">
-            <img src="../img/photo-roads-mobile@1x.jpg" alt="Дорога на север">
+          <a class="photo__link" href="#">
+            <img class="photo__img" src="../img/photo-roads-mobile@1x.jpg" alt="Дорога на север">
           </a>
-          <h3 class="photo__title">Дорога на север</h3>
-          <p class="photo__author">Автор фото: Петр</p>
-          <div class="photo__likes likes">
-            <a class="likes__icon" href="#">
-<img src="img/icon-like.svg" alt="Палец вверх"></a>
-            <span class="likes__num">96</span>
+          <div class="photo__info">
+            <div class="photo__info-inner">
+              <h3 class="photo__title">Дорога на север</h3>
+              <p class="photo__author">Автор фото: Петр</p>
+            </div>
+            <div class="photo__likes likes">
+              <a class="likes__icon" href="#">
+                <img src="img/icon-like.svg" alt="Палец вверх"></a>
+              <span class="likes__num">96</span>
+            </div>
           </div>
         </div>
+
         <div class="photo__item">
-          <a class="photo__img" href="#">
-            <img src="../img/photo-bridge-mobile@1x.jpg" alt="Мост дьявола">
+          <a class="photo__link" href="#">
+            <img class="photo__img" src="../img/photo-bridge-mobile@1x.jpg" alt="Мост дьявола">
           </a>
-          <h3 class="photo__title">Мост дьявола</h3>
-          <p class="photo__author">Автор фото: Антон</p>
-          <div class="photo__likes likes">
-            <a class="likes__icon" href="#">
-<img src="img/icon-like.svg" alt="Палец вверх"></a>
-            <span class="likes__num">254</span>
+          <div class="photo__info">
+            <div class="photo__info-inner">
+                <h3 class="photo__title">Мост дьявола</h3>
+                <p class="photo__author">Автор фото: Антон</p>
+            </div>
+            <div class="photo__likes likes">
+              <a class="likes__icon" href="#">
+                <img src="img/icon-like.svg" alt="Палец вверх"></a>
+              <span class="likes__num">254</span>
+            </div>
           </div>
         </div>
       </section>
@@ -143,7 +162,7 @@
     </main>
 
     <footer class="page-footer">
-      <p class="page-footer__hashtag"></p>
+      <p class="page-footer__hashtag">#visitsedona</p>
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">

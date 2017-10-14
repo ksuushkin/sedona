@@ -20,5 +20,7 @@
   @media (min-width: $screen-lg) {
     min-width: $screen-lg;
     width: $screen-lg;
+    box-shadow: 0 0 30px -4px rgba(0, 0, 0, 0.6);
   }
+
 }

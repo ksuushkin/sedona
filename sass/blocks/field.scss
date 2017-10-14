@@ -1,8 +1,32 @@
+.field {
+  @media (min-width: $screen-md) {
+    width: 50%;
+    margin: 0;
+  }
+}
+
 .field__inner {
-  padding-left: 20px;
-  padding-right: 20px;
   margin-bottom: 16px;
   border-top: 1px solid $gray;
+}
+
+.field__inner--checkbox {
+  @media (min-width: $screen-md) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 465px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $screen-lg) {
+    width: auto;
+  }
+}
+
+.field__inner--contact {
+  @media (min-width: $screen-lg) {
+    display: flex;
+  }
 }
 
 .field__item {
@@ -14,6 +38,23 @@
   &--inline {
     display: flex;
     align-items: center;
+  }
+}
+
+.field__item--checkbox {
+  @media (min-width: $screen-md) {
+    width: 50%;
+  }
+
+  @media (min-width: $screen-lg) {
+    width: 25%;
+  }
+}
+
+.field__item--contact {
+  @media (min-width: $screen-lg) {
+    width: 50%;
+    marrgin: 0 5px;
   }
 }
 
@@ -33,6 +74,12 @@
   color: $gray--darker;
 }
 
+.field__name-hidden {
+  @media (min-width: $screen-lg) {
+    display: none;
+  }
+}
+
 .field__input {
   width: 100%;
   padding-top: 14px;
@@ -47,3 +94,54 @@
   border: none;
   outline: none;
 }
+
+.field__input--phone {
+  @media (min-width: $screen-lg) {
+    width: auto;
+  }
+}
+
+.field__input--email {
+  @media (min-width: $screen-lg) {
+    width: auto;
+  }
+}
+
+.field--intro {
+  @media (min-width: $screen-md) {
+    order: 2;
+  }
+}
+
+.field--contact {
+  @media (min-width: $screen-md) {
+    width: 100%;
+    order: 3;
+  }
+}
+
+.field__item--checkbox:nth-child(1) {
+  @media (min-width: $screen-md) {
+    order: 1;
+  }
+}
+
+.field__item--checkbox:nth-child(2) {
+  @media (min-width: $screen-md) {
+    order: 3;
+  }
+}
+
+.field__item--checkbox:nth-child(3) {
+  @media (min-width: $screen-md) {
+    order: 2;
+  }
+}
+
+.field__item--checkbox:nth-child(4) {
+  @media (min-width: $screen-md) {
+    order: 4;
+  }
+}
+
+
