@@ -9,6 +9,9 @@
 
   @media (min-width: $screen-md) {
     width: 457px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
   }
 }
 
@@ -37,8 +40,8 @@
   line-height: 24px;
 
   @media (min-width: $screen-md) {
-    // padding-left: 30px;
-    // padding-right: 30px;
+    margin-top: 13px;
+    padding-bottom: 43px;
   }
 }
 

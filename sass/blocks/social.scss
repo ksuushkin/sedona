@@ -6,6 +6,11 @@
   justify-content: space-between;
   margin-left: 84px;
   margin-right: 85px;
+
+  @media (min-width: $screen-md) {
+    margin-left: 52px;
+    margin-right: 52px;
+  }
 }
 
 .social__item {
