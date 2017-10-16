@@ -22,3 +22,11 @@ img {
     display: inherit;
   }
 }
+
+.show-lg {
+  display: none;
+
+  @media (min-width: $screen-lg) {
+    display: inherit;
+  }
+}

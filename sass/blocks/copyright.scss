@@ -14,6 +14,10 @@
   @media (min-width: $screen-md) {
     margin-left: 11px;
   }
+
+  @media (min-width: $screen-lg) {
+    margin-left: auto;
+  }
 }
 
 .copyright__link {
@@ -26,5 +30,9 @@
 
   @media (min-width: $screen-md) {
     margin-left: 3px;
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-right: 39px;
   }
 }

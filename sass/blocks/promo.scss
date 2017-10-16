@@ -87,6 +87,11 @@
     margin-left: 76px;
     margin-right: 80px;
   }
+
+  @media (min-width: $screen-lg) {
+    margin-left: 262px;
+    margin-right: 262px;
+  }
 }
 
 .promo__title {

@@ -1,16 +1,10 @@
 .social__list {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   list-style-type: none;
   display: flex;
   justify-content: space-between;
-  margin-left: 84px;
-  margin-right: 85px;
-
-  @media (min-width: $screen-md) {
-    margin-left: 52px;
-    margin-right: 52px;
-  }
+  width: 151px;
 }
 
 .social__item {
