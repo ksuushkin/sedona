@@ -13,7 +13,7 @@
   &::after {
     content: "";
     position: absolute;
-    width: 321px;
+    width: 100%;
     height: 30px;
     bottom: 0;
     left: 0;
@@ -37,24 +37,9 @@
   min-height: 390px;
 
   @media (min-width: $screen-md) {
-    min-height: 486px;
+    min-height: 520px;
   }
 }
-
-.promo__img-inner--main::after {
-  content: "";
-  position: absolute;
-  width: 321px;
-  height: 30px;
-  bottom: 0;
-  left: 0;
-  background: url("../img/bg-intro-triangle-mobile.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom center;
-  z-index: 10;
-}
-
 
 .promo__img {
   display: block;
@@ -95,6 +80,10 @@
   padding-bottom: 29px;
   padding-top: 38px;
   color: $black;
+
+  @media (min-width: $screen-md) {
+    font-size: $font-large;
+  }
 }
 
 .promo__title {
@@ -102,8 +91,8 @@
   font-weight: 700;
   line-height: 26px;
   margin: 0 auto;
-  padding-bottom: 26px;
-  padding-top: 35px;
+  padding-bottom: 27px;
+  padding-top: 37px;
   color: $black;
 
   @media (min-width: $screen-md) {
@@ -112,7 +101,7 @@
 }
 
 .promo__text {
-  line-height: 26px;
+  line-height: 24px;
   margin: 0 auto;
   padding-left: 23px;
   padding-right: 22px;
@@ -125,6 +114,7 @@
 }
 
 .promo__text--main {
+  line-height: 26px;
   @media (min-width: $screen-md) {
     margin-left: 110px;
     margin-right: 110px;
