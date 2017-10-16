@@ -1,26 +1,98 @@
 .player {
   display: flex;
-  width: 100%;
+  flex-direction: column;
+  width: 320px;
   margin: 0 auto;
   margin-bottom: 75px;
-  min-height: 200px;
+  padding-top: 200px;
+  background-image: url(/img/video-mobile@1x.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // min-height: 200px;
 
   @media (min-width: $screen-md) {
     width: 648px;
-    min-height: 500px;
+    padding-top: 407px;
   }
 
-  @media (min-width: $screen-md) {
+  @media (min-width: $screen-lg) {
     width: 800px;
-    min-height: 500px;
+    padding-top: 407px;
+  }
+}
+
+.player__controls {
+  position: relative;
+
+  // &::after {
+  //   content: "";
+  //   background-color: $gray;
+  //   width: 200px;
+  //   height: 3px;
+  // }
+}
+
+.player__timeline {
+  position: absolute;
+  bottom: 67px;
+  left: 20px;
+  height: 45px;
+  width: 280px;
+  background-color: $black;
+  opacity: 0.6;
+
+  @media (min-width: $screen-md) {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 92px;
   }
 }
 
 .player__screen {
+  // position: relative;
   width: 100%;
+  min-height: 200px;
   margin: 0 auto;
   background-image: url("../img/video-mobile@1x.jpg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.player__buttons-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 67px;
+  background-color: $gray--lighter;
+
+  @media (min-width: $screen-md) {
+    background-color: transparent;
+    height: 92px;
+  }
+}
+
+.player__buttons {
+  z-index: 3;
+}
+
+.player__buttons--replay {
+  width: 16px;
+  height: 20px;
+  margin-left: 25px;
+}
+
+.player__buttons--sub {
+  width: 32px;
+  height: 20px;
+  margin-right: 31px;
+  margin-left: auto;
+}
+
+.player__buttons--full {
+  width: 20px;
+  height: 20px;
+  margin-right: 23px;
 }
