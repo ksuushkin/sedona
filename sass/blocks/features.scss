@@ -43,7 +43,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
-
   }
 
   @media (min-width: $screen-md) {
@@ -55,7 +54,7 @@
 .features__item--house {
   &::before {
     top: -9px;
-    left: -49px
+    left: -49px;
   }
 
   @media (min-width: $screen-md) {
