@@ -17,6 +17,7 @@ img {
 
 .show-md {
   display: none;
+
   @media (min-width: $screen-md) {
     display: inherit;
   }
