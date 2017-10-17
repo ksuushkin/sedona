@@ -2,40 +2,9 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.css">
-
-  <!-- Pixel Glass -->
-    <style>
-      HTML {
-        background-repeat: no-repeat;
-        background-position:  50% 0;
-        /* По умолчанию мобильный макет */
-        background-image: url( "pixel-img/sedona-form-mobile.jpg" );
-      }
-      /* Планшет */
-      @media ( min-width: 760px ) {
-        HTML {
-          /* Планшетный макет */
-          background-image: url( "pixel-img/sedona-form-mobile.jpg" );
-        }
-      }
-      /* Десктоп */
-      @media ( min-width: 960px ) {
-        HTML {
-          /* Десктопный макет */
-          background-image: url( "pixel-img/sedona-form-mobile.jpg" );
-        }
-      }
-
-      BODY {
-        opacity: .5;
-      }
-    </style>
-    <link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
-    <script src="../node_modules/pixel-glass/script.js"></script>
-    <!-- // Pixel Glass -->
-
 </head>
 <body class="page">
   <header class="page-header">
@@ -68,8 +37,8 @@
     <main class="page-main">
 
       <section class="promo">
-        <div class="page-main__img">
-          <img src="img/text-sedona.svg" alt="Welcome to Sedona">
+        <div class="promo__img-inner">
+          <img class="promo__img" src="img/text-sedona.svg" alt="Welcome to Sedona">
         </div>
           <h1 class="promo__title">Оставьте свой отзыв</h1>
           <p class="promo__text">
@@ -79,7 +48,7 @@
       </section>
 
       <form class="form" action="https://echo.htmlacademy.ru/" method="post">
-        <fieldset class="form__field field">
+        <fieldset class="form__field field field--intro">
           <div class="field__inner">
             <legend class="field__caption">
               Представьтесь:
@@ -100,16 +69,16 @@
 
         </fieldset>
 
-        <fieldset class="form__field field">
-          <div class="field__inner">
-            <legend class="field__caption">
-              Контактная информация:
-            </legend>
-            <div class="field__item">
-              <label class="field__name" for="tel">Контактный телефон*:</label>
+        <fieldset class="form__field field field--contact">
+          <legend class="field__caption">
+            Контактная информация:
+          </legend>
+          <div class="field__inner field__inner--contact">
+            <div class="field__item field__item--contact">
+              <label class="field__name" for="tel"><span class="field__name-hidden">Контактный </span>телефон*:</label>
               <input class="field__input field__input--phone" id="tel" type="tel" placeholder="Введите телефон">
             </div>
-            <div class="field__item">
+            <div class="field__item field__item--contact">
               <label class="field__name" for="email">Электронная почта*:</label>
               <input class="field__input field__input--email" id="email" type="email" placeholder="Введите e-mail">
             </div>
@@ -117,10 +86,10 @@
         </fieldset>
 
         <fieldset class="form__field field field-radio">
+          <legend class="field__caption">
+            Ваше общее впечатление:
+          </legend>
           <div class="field__inner">
-            <legend class="field__caption">
-              Ваше общее впечатление:
-            </legend>
             <div class="field__item">
               <label class="field-radio__name">
                 <input class="field-radio__input" type="radio" name="rating" checked>
@@ -143,29 +112,29 @@
         </fieldset>
 
         <fieldset class="form__field field field-checkbox">
-          <div class="field__inner">
-            <legend class="field__caption">
-              Посещенные достопримечательности:
-            </legend>
-            <div class="field__item">
+          <legend class="field__caption">
+            Посещенные достопримечательности:
+          </legend>
+          <div class="field__inner field__inner--checkbox">
+            <div class="field__item field__item--checkbox">
               <label class="field-checkbox__name">
                 <input class="field-checkbox__input" type="checkbox" checked>
                 <span class="field-checkbox__name-text">Мост Дьявола</span>
               </label>
             </div>
-            <div class="field__item">
+            <div class="field__item field__item--checkbox">
               <label class="field-checkbox__name">
                 <input class="field-checkbox__input" type="checkbox" checked>
                 <span class="field-checkbox__name-text">Слайд-парк</span>
               </label>
             </div>
-            <div class="field__item">
+            <div class="field__item field__item--checkbox">
               <label class="field-checkbox__name">
                 <input class="field-checkbox__input" type="checkbox">
                 <span class="field-checkbox__name-text">Гора-Колокол</span>
               </label>
             </div>
-            <div class="field__item">
+            <div class="field__item  field__item--checkbox">
               <label class="field-checkbox__name">
                 <input class="field-checkbox__input" type="checkbox" checked>
                 <span class="field-checkbox__name-text">Красные скалы</span>
@@ -175,12 +144,12 @@
         </fieldset>
 
         <fieldset class="form__field field field-text">
+          <legend class="field__caption">
+            Опишите свои эмоции
+          </legend>
           <div class="field__inner">
-            <legend class="field__caption">
-              Опишите свои эмоции
-            </legend>
             <label class="field-text__name">
-              <textarea class="field-text__input" cols="30" rows="10">Опишите подробно все свои восторги</textarea>
+              <textarea class="field-text__input" cols="30" rows="6">Опишите подробно все свои восторги</textarea>
             </label>
           </div>
         </fieldset>
@@ -188,11 +157,12 @@
         <div class="form__actions">
           <button class="btn" type="submit">Отправить отзыв</button>
         </div>
+        <p class="form__required">*-обязательные поля</p>
       </form>
     </main>
 
     <footer class="page-footer">
-      <p class="page-footer__hashtag"></p>
+      <p class="page-footer__hashtag">#visitsedona</p>
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">

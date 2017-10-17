@@ -1,26 +1,66 @@
 .main-nav {
   position: relative;
+  width: 320px;
   text-align: center;
 
-  &__toggle {
-    position: absolute;
-    top: 16px;
-    right: 20px;
-    height: 23px;
-    width: 23px;
-    z-index: 10;
-    border: none;
-    background-color: $white;
-    cursor: pointer;
+  @media (min-width: $screen-md) {
+    width: $screen-md;
+  }
+
+  @media (min-width: $screen-lg) {
+    width: $screen-lg;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  height: 23px;
+  width: 23px;
+  z-index: 10;
+  border: none;
+  background-color: $white;
+  cursor: pointer;
+
+  @media (min-width: $screen-md) {
+    display: none;
   }
 }
 
 .main-nav__list {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   padding: 0;
   margin: 0;
   list-style-type: none;
   background-color: $blue;
+
+  @media (min-width: $screen-md) {
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $white;
+  }
+}
+
+.main-nav__item {
+  @media (min-width: $screen-md) {
+    width: 20%;
+  }
+}
+
+/* Space for logo */
+.main-nav__item:nth-child(2) {
+  @media (min-width: $screen-md) {
+    margin-right: 10%;
+  }
+}
+
+.main-nav__item:nth-child(3) {
+  @media (min-width: $screen-md) {
+    margin-left: 10%;
+  }
 }
 
 .main-nav__item a {
@@ -38,6 +78,12 @@
   font-weight: 700;
   border-bottom: 1px solid #678fa8;
   border-top: 1px solid #9ac2db;
+
+  @media (min-width: $screen-md) {
+    font-size: $font-small;
+    color: $black;
+    border: none;
+  }
 
   &:hover {
     background-color: $blue--dark;

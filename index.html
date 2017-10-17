@@ -2,40 +2,9 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- Pixel Glass -->
-    <style>
-      HTML {
-        background-repeat: no-repeat;
-        background-position:  50% 0;
-        /* По умолчанию мобильный макет */
-        background-image: url( "pixel-img/sedona-index-mobile.jpg" );
-      }
-      /* Планшет */
-      @media ( min-width: 760px ) {
-        HTML {
-          /* Планшетный макет */
-          background-image: url( "pixel-img/sedona-index-mobile.jpg" );
-        }
-      }
-      /* Десктоп */
-      @media ( min-width: 960px ) {
-        HTML {
-          /* Десктопный макет */
-          background-image: url( "pixel-img/sedona-index-mobile.jpg" );
-        }
-      }
-
-      BODY {
-        opacity: .5;
-      }
-    </style>
-    <link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
-    <script src="../node_modules/pixel-glass/script.js"></script>
-    <!-- // Pixel Glass -->
-
   </head>
   <body class="page">
 
@@ -71,11 +40,11 @@
 
       <section class="promo">
         <h2 class="visually-hidden">Седона - лучший город</h2>
-        <div class="promo__img">
-          <img src="img/text-sedona-index.svg" alt="Welcome to Sedona">
+        <div class="promo__img-inner promo__img-inner--main">
+          <img class="promo__img promo__img--main" src="img/text-sedona-index.svg" alt="Welcome to Sedona">
         </div>
-        <p class="promo__slogan">Седона − небольшой городок в Аризоне, заслуживающий большего!</p>
-        <p class="promo__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+        <p class="promo__slogan">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+        <p class="promo__text promo__text--main">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       </section>
 
       <section class="reasons reasons--triangle">
@@ -89,8 +58,8 @@
             Седона не аттракцион для туристов, там течет своя жизнь
           </p>
         </div>
-        <picture class="reasons__img">
-          <img src="img/main-city-mobile@1x.JPG" alt="Настоящий городок">
+        <picture>
+          <img class="reasons__img" src="img/main-city-mobile@1x.jpg" alt="Настоящий городок">
         </picture>
       </section>
 
@@ -103,28 +72,28 @@
           </li>
           <li class="features__item features__item--gift">
             <h3 class="features__title">Сувениры</h3>
-            <p class="features__descr">Не только китайского, но и местного производства!</p>
+            <p class="features__descr">Не только китайского,<br class="show-lg"> но и местного производства!</p>
           </li>
           <li class="features__item features__item--food">
             <h3 class="features__title">Еда</h3>
-            <p class="features__descr">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+            <p class="features__descr">Всегда заказывайте фирменный бургер,<br class="show-md"> вы не разочаруетесь!</p>
           </li>
         </ul>
       </section>
 
-      <section class="reasons">
+      <section class="reasons reasons--reverse">
         <div class="reasons__inner">
           <h2 class="visually-hidden">Еще одна причина приехать в седону</h2>
           <h3 class="reasons__title">
-            Там есть мостдьявола
+            Там есть мост дьявола
           </h3>
           <span class="reasons__num">— №2 —</span>
           <p class="reasons__descr">
-            Да, по нему можно пройти! Если вы осмелитесь, конечно
+            Да, по нему можно пройти!<br class="show-lg"> Если вы осмелитесь, конечно
           </p>
         </div>
-        <picture class="reasons__img">
-          <img src="img/photo-bridge-mobile@1x.JPG" alt="Мост дьявола">
+        <picture>
+          <img class="reasons__img" src="img/photo-bridge-mobile@1x.jpg" alt="Мост дьявола">
         </picture>
       </section>
 
@@ -141,7 +110,7 @@
             <h3 class="reasons__title">Красивая дорога</h3>
             <span class="reasons__num">— №4 —</span>
             <p class="reasons__descr">
-              Ехать в Седону из Лас-Вегаса совсем не скучно!
+              Ехать в Седону из Лас-Вегаса совсем не&nbspскучно!
             </p>
           </li>
           <li class="reasons__item">
@@ -158,12 +127,12 @@
         <h2 class="visually-hidden">Поиск гостиниц в Седоне</h2>
         <p class="search__subtitle">Заинтересовались?</p>
         <p class="search__lead">
-          Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
+          Укажите предполагаемые даты поездки,<br class="show-md"> и мы покажем вам лучшие предложения гостиниц в Седоне
         </p>
         <a class="search__link" href="#">Найти гостиницу</a>
       </section>
       <div class="location">
-        <div class="location__map"></div>
+        <iframe class="location__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92642.74312258087!2d-111.82729476841891!3d34.87702390882648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1507931730307" frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
     </main>
 

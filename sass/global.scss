@@ -14,3 +14,19 @@ img {
   clip: rect(0, 0, 0, 0);
   overflow: hidden;
 }
+
+.show-md {
+  display: none;
+
+  @media (min-width: $screen-md) {
+    display: inherit;
+  }
+}
+
+.show-lg {
+  display: none;
+
+  @media (min-width: $screen-lg) {
+    display: inherit;
+  }
+}

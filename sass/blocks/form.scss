@@ -1,10 +1,38 @@
 .form {
   text-align: left;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $screen-md) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 648px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $screen-lg) {
+    width: 960px;
+  }
 }
 
 .form__field {
-  width: 100%;
-  margin: 0 auto;
   padding: 0;
   border: none;
+}
+
+.form__actions {
+  @media (min-width: $screen-md) {
+    order: 6;
+  }
+}
+
+.form__required {
+  display: none;
+
+  @media (min-width: $screen-md) {
+    display: block;
+    order: 7;
+    margin-left: auto;
+  }
 }

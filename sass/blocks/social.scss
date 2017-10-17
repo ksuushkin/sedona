@@ -1,7 +1,10 @@
 .social__list {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  width: 151px;
 }
 
 .social__item {
@@ -9,7 +12,5 @@
   box-sizing: border-box;
   width: 47px;
   height: 47px;
-  padding-top: 10px;
-  margin-right: 6px;
   background-color: $blue;
 }

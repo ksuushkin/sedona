@@ -2,27 +2,18 @@
   text-align: center;
 }
 
-.promo__img {
+.promo__img-inner {
   position: relative;
-  min-height: 390px;
+  min-height: 158px;
   background: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
 
-  img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 90px;
-    width: 282px;
-    height: 214px;
-  }
-
   &::after {
     content: "";
     position: absolute;
-    width: 321px;
+    width: 100%;
     height: 30px;
     bottom: 0;
     left: 0;
@@ -31,6 +22,51 @@
     background-size: cover;
     background-position: bottom center;
     z-index: 10;
+  }
+
+  @media (min-width: $screen-md) {
+    min-height: 292px;
+  }
+
+  @media (min-width: $screen-lg) {
+    min-height: 302px;
+  }
+}
+
+.promo__img-inner--main {
+  min-height: 390px;
+
+  @media (min-width: $screen-md) {
+    min-height: 520px;
+  }
+}
+
+.promo__img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 230px;
+  height: 141px;
+
+  @media (min-width: $screen-md) {
+    width: 461px;
+    height: 271px;
+  }
+
+  @media (min-width: $screen-lg) {
+    height: 285px;
+  }
+}
+
+.promo__img--main {
+  padding-top: 90px;
+  width: 282px;
+  height: 214px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 77px;
+    width: 458px;
+    height: 350px;
   }
 }
 
@@ -44,6 +80,18 @@
   padding-bottom: 29px;
   padding-top: 38px;
   color: $black;
+
+  @media (min-width: $screen-md) {
+    font-size: $font-large;
+    margin-top: 11px;
+    margin-left: 76px;
+    margin-right: 80px;
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-left: 262px;
+    margin-right: 262px;
+  }
 }
 
 .promo__title {
@@ -51,15 +99,34 @@
   font-weight: 700;
   line-height: 26px;
   margin: 0 auto;
-  padding-bottom: 26px;
-  padding-top: 35px;
+  padding-bottom: 27px;
+  padding-top: 37px;
   color: $black;
+
+  @media (min-width: $screen-md) {
+    font-size: $font-giant;
+  }
 }
 
 .promo__text {
-  line-height: 26px;
+  line-height: 24px;
   margin: 0 auto;
   padding-left: 23px;
   padding-right: 22px;
   padding-bottom: 13px;
+
+  @media (min-width: $screen-md) {
+    margin-left: 145px;
+    margin-right: 145px;
+  }
+}
+
+.promo__text--main {
+  line-height: 26px;
+
+  @media (min-width: $screen-md) {
+    margin-left: 110px;
+    margin-right: 110px;
+    margin-bottom: 36px;
+  }
 }
