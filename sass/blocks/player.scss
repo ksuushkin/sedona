@@ -5,11 +5,10 @@
   margin: 0 auto;
   margin-bottom: 75px;
   padding-top: 200px;
-  background-image: url("/img/video-mobile@1x.jpg");
+  background-image: url("img/video-mobile@1x.jpg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
-  // min-height: 200px;
 
   @media (min-width: $screen-md) {
     width: 648px;
