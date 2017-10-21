@@ -24,7 +24,7 @@
   padding-top: 38px;
   padding-left: 22px;
   padding-right: 22px;
-  padding-bottom: 40px;
+  padding-bottom: 39px;
 
   @media (min-width: $screen-md) {
     padding-left: 0;
@@ -121,7 +121,7 @@
   @media (min-width: $screen-md) {
     display: flex;
     align-content: baseline;
-    margin-bottom: 15px;
+    margin-bottom: 17px;
   }
 
   @media (min-width: $screen-lg) {
@@ -173,7 +173,7 @@
 
   @media (min-width: $screen-md) {
     width: 512px;
-    height: 257px;
+    height: 256px;
   }
 
   @media (min-width: $screen-lg) {

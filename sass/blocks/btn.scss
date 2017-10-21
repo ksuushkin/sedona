@@ -2,4 +2,9 @@
   margin: 0 auto;
 
   @include btn();
+
+  @media (min-width: $screen-md) {
+    width: 50%;
+    padding-left: 0;
+  }
 }

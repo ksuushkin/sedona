@@ -26,10 +26,12 @@
 
   @media (min-width: $screen-md) {
     min-height: 292px;
+    margin-bottom: 37px;
   }
 
   @media (min-width: $screen-lg) {
     min-height: 302px;
+    margin-bottom: 75px;
   }
 }
 
@@ -38,6 +40,7 @@
 
   @media (min-width: $screen-md) {
     min-height: 520px;
+    margin-bottom: 0;
   }
 }
 
@@ -99,12 +102,14 @@
   font-weight: 700;
   line-height: 26px;
   margin: 0 auto;
-  padding-bottom: 27px;
-  padding-top: 37px;
+  padding-bottom: 25px;
+  padding-top: 38px;
   color: $black;
 
   @media (min-width: $screen-md) {
     font-size: $font-giant;
+    padding-top: 36px;
+    padding-bottom: 31px;
   }
 }
 
@@ -113,20 +118,26 @@
   margin: 0 auto;
   padding-left: 23px;
   padding-right: 22px;
-  padding-bottom: 13px;
+  padding-bottom: 17px;
 
   @media (min-width: $screen-md) {
-    margin-left: 145px;
-    margin-right: 145px;
+    margin-left: 143px;
+    margin-right: 143px;
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-left: 355px;
+    margin-right: 355px;
   }
 }
 
 .promo__text--main {
   line-height: 26px;
+  padding-bottom: 15px;
 
   @media (min-width: $screen-md) {
     margin-left: 110px;
     margin-right: 110px;
-    margin-bottom: 36px;
+    margin-bottom: 35px;
   }
 }

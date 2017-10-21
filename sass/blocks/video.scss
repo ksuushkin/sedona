@@ -10,6 +10,16 @@
   color: $black;
   margin-bottom: 27px;
   margin-top: 33px;
+
+  @media (min-width: $screen-md) {
+    font-size: $font-giant;
+    margin-top: 67px;
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-top: 70px;
+  }
 }
 
 .video__text {
@@ -18,4 +28,16 @@
   margin-left: 34px;
   margin-right: 34px;
   margin-bottom: 34px;
+
+  @media (min-width: $screen-md) {
+    margin-left: 164px;
+    margin-right: 164px;
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-left: 380px;
+    margin-right: 380px;
+    margin-bottom: 70px;
+  }
 }

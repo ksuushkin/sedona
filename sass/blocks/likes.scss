@@ -1,3 +1,16 @@
+.likes {
+  display: flex;
+  align-items: flex-end;
+}
+
 .likes__icon {
   margin-right: 12px;
+
+  @media (min-width: $screen-md) {
+    margin-right: 9px;
+  }
+}
+
+.likes__num {
+  font-weight: 700;
 }

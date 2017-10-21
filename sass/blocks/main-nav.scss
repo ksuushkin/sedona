@@ -84,13 +84,24 @@
     color: $black;
     border: none;
   }
+}
 
-  &:hover {
-    background-color: $blue--dark;
+.main-nav__item a:hover {
+  background-color: $blue--dark;
+
+  @media (min-width: $screen-md) {
+    background-color: $white;
+    color: $blue;
   }
+}
 
-  &:active {
-    color: #88b6d1;
-    background-color: $blue--darker;
+.main-nav__item a:active {
+  color: #88b6d1;
+  background-color: $blue--darker;
+
+
+  @media (min-width: $screen-md) {
+    background-color: $white;
+    color: $gray;
   }
 }

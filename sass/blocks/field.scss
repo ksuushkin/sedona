@@ -7,13 +7,21 @@
 
 .field__inner {
   margin-bottom: 16px;
-  border-top: 1px solid $gray;
+  margin-right: 18px;
+  margin-left: 18px;
+
+  @media (min-width: $screen-md) {
+    margin: 0;
+  }
 }
 
 .field__inner--checkbox {
+  margin-bottom: 6px;
+
   @media (min-width: $screen-md) {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     width: 465px;
     margin: 0 auto;
   }
@@ -24,8 +32,13 @@
 }
 
 .field__inner--contact {
+  margin-bottom: 29px;
+
   @media (min-width: $screen-lg) {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
@@ -33,7 +46,7 @@
   margin: 0;
   width: 100%;
   padding: 10px 0;
-  margin-bottom: 4px;
+  margin-bottom: 1px;
 
   &--inline {
     display: flex;
@@ -41,20 +54,47 @@
   }
 }
 
-.field__item--checkbox {
+.field__item--radio {
+  padding-bottom: 6px;
+  margin-bottom: 0;
+
   @media (min-width: $screen-md) {
-    width: 50%;
+    padding-bottom: 14px;
   }
 
   @media (min-width: $screen-lg) {
-    width: 25%;
+    padding-left: 5px;
+  }
+}
+
+.field__item--checkbox {
+  padding-top: 4px;
+  padding-bottom: 21px;
+
+  @media (min-width: $screen-md) {
+    width: 44%;
+    padding-bottom: 29px;
+  }
+
+  @media (min-width: $screen-lg) {
+    width: auto;
   }
 }
 
 .field__item--contact {
+  padding-top: 9px;
+  padding-bottom: 0;
+  margin-top: 3px;
+  position: relative;
+
+  @media (min-width: $screen-md) {
+    padding-top: 21px;
+  }
+
   @media (min-width: $screen-lg) {
     width: 50%;
-    marrgin: 0 5px;
+    display: flex;
+    align-items: baseline;
   }
 }
 
@@ -64,14 +104,102 @@
   color: $black;
   font-weight: 700;
   line-height: 26px;
-  padding-top: 18px;
-  margin-bottom: 15px;
+
+  @media (min-width: $screen-md) {
+    font-size: $font-large;
+    text-align: left;
+  }
+}
+
+.field__caption--contact {
+  @media (min-width: $screen-md) {
+    text-align: center;
+  }
+
+  @media (min-width: $screen-lg) {
+    margin: 0 auto;
+  }
+}
+
+.field__caption--text {
+  margin-bottom: 16px;
+
+  @media (min-width: $screen-md) {
+    text-align: center;
+  }
+
+  @media (min-width: $screen-lg) {
+    margin: 0 auto;
+  }
+}
+
+.field__caption--checkbox {
+  @media (min-width: $screen-md) {
+    text-align: center;
+  }
+
+  @media (min-width: $screen-lg) {
+    margin: 0 auto;
+  }
+}
+
+.field__caption--radio {
+  @media (min-width: $screen-lg) {
+    text-align: center;
+    width: 276px;
+    margin: 0 auto;
+  }
+}
+
+.field__caption-wrapper {
+  margin-top: 19px;
+  margin-bottom: 11px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 49px;
+    margin-right: 5px;
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-right: 6px;
+  }
+}
+
+.field__caption-wrapper--contact {
+  @media (min-width: $screen-md) {
+    margin-top: 53px;
+    margin-bottom: 1px;
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-top: 50px;
+    margin-bottom: 44px;
+    width: 100%;
+  }
+}
+
+.field__caption-wrapper--checkbox {
+  @media (min-width: $screen-md) {
+    margin-bottom: 38px;
+  }
 }
 
 .field__name {
   margin-right: 14px;
   line-height: 26px;
   color: $gray--darker;
+
+  @media (min-width: $screen-lg) {
+    margin-right: 18px;
+  }
+}
+
+.field__name--contact {
+  margin-left: 21px;
+
+  @media (min-width: $screen-lg) {
+    margin-left: 0;
+  }
 }
 
 .field__name-hidden {
@@ -82,9 +210,9 @@
 
 .field__input {
   width: 100%;
-  padding-top: 14px;
+  height: 57px;
+  box-sizing: border-box;
   padding-left: 21px;
-  padding-bottom: 14px;
   font-size: $font-normal;
   font-weight: 700;
   line-height: 26px;
@@ -93,23 +221,54 @@
   letter-spacing: -1px;
   border: none;
   outline: none;
-}
 
-.field__input--phone {
   @media (min-width: $screen-lg) {
-    width: auto;
+    padding-left: 16px;
   }
 }
 
-.field__input--email {
+.field__input-wrapper {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    height: 57px;
+    width: 57px;
+    background-color: $gray;
+    background-position: 50%;
+    background-repeat: no-repeat;
+  }
+}
+
+.field__input-wrapper--phone::after {
+  background-image: url("../img/icon-phone.svg");
+}
+
+.field__input-wrapper--email::after {
+  background-image: url("../img/icon-mail.svg");
+}
+
+.field__input--contact {
+  margin-top: 7px;
+  padding-right: 57px;
+
   @media (min-width: $screen-lg) {
-    width: auto;
+    width: 314px;
   }
 }
 
 .field--intro {
   @media (min-width: $screen-md) {
     order: 2;
+    width: 41%;
+    margin-left: auto;
+  }
+
+  @media (min-width: $screen-lg) {
+    width: 41.5%;
   }
 }
 

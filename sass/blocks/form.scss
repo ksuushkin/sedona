@@ -2,6 +2,7 @@
   text-align: left;
   display: flex;
   flex-direction: column;
+  margin-bottom: 73px;
 
   @media (min-width: $screen-md) {
     flex-direction: row;
@@ -9,21 +10,33 @@
     width: 648px;
     margin: 0 auto;
     margin-bottom: 30px;
+    margin-top: 37px;
   }
 
   @media (min-width: $screen-lg) {
     width: 960px;
+    margin-top: 23px;
+    margin-bottom: 34px;
   }
 }
 
 .form__field {
   padding: 0;
   border: none;
+  border-top: 1px solid $gray;
+
+  @media (min-width: $screen-md) {
+    border: none;
+  }
 }
 
 .form__actions {
   @media (min-width: $screen-md) {
+    display: flex;
+    align-items: baseline;
+    width: 100%;
     order: 6;
+    margin-bottom: 68px;
   }
 }
 
@@ -32,6 +45,8 @@
 
   @media (min-width: $screen-md) {
     display: block;
+    text-align: right;
+    width: 50%;
     order: 7;
     margin-left: auto;
   }

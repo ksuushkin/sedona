@@ -8,11 +8,11 @@
   background-image: url("../img/video-mobile@1x.jpg");
   background-position: top center;
   background-repeat: no-repeat;
-  background-size: cover;
 
   @media (min-width: $screen-md) {
     width: 648px;
     padding-top: 407px;
+    background-size: cover;
   }
 
   @media (min-width: $screen-lg) {
@@ -34,7 +34,7 @@
 
 .player__timeline {
   position: absolute;
-  bottom: 67px;
+  bottom: 66px;
   left: 20px;
   height: 45px;
   width: 280px;
@@ -49,8 +49,49 @@
   }
 }
 
+.player__timeline-inner {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-color: $gray;
+    opacity: 0.3;
+    width: 235px;
+    height: 3px;
+    left: 22px;
+    top: 22px;
+
+    @media (min-width: $screen-md) {
+      width: 388px;
+      height: 3px;
+      left: 93px;
+      top: 45px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 537px;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: $white;
+    height: 9px;
+    width: 9px;
+    border-radius: 50%;
+    top: 19px;
+    left: 58px;
+
+    @media (min-width: $screen-md) {
+      top: 42px;
+      left: 205px;
+    }
+  }
+}
+
 .player__screen {
-  // position: relative;
   width: 100%;
   min-height: 200px;
   margin: 0 auto;
@@ -63,13 +104,17 @@
 .player__buttons-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
   height: 67px;
+  width: 280px;
+  align-items: center;
   background-color: $gray--lighter;
 
   @media (min-width: $screen-md) {
     background-color: transparent;
     height: 92px;
+    width: 100%;
   }
 }
 
@@ -81,6 +126,10 @@
   width: 16px;
   height: 20px;
   margin-left: 25px;
+
+  @media (min-width: $screen-md) {
+    margin-left: 35px;
+  }
 }
 
 .player__buttons--sub {
@@ -94,4 +143,8 @@
   width: 20px;
   height: 20px;
   margin-right: 23px;
+
+  @media (min-width: $screen-md) {
+    margin-right: 41px;
+  }
 }
