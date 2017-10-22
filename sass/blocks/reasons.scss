@@ -166,10 +166,10 @@
   }
 }
 
-.reasons__img {
-  display: block;
+.reasons__img-wrapper {
   width: 320px;
   height: 260px;
+  overflow: hidden;
 
   @media (min-width: $screen-md) {
     width: 512px;
@@ -178,5 +178,11 @@
 
   @media (min-width: $screen-lg) {
     width: 800px;
+    height: 256px;
   }
+}
+.reasons__img {
+  display: block;
+  width: 100%;
+  height: auto;
 }

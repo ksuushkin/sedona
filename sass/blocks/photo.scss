@@ -56,6 +56,7 @@
 
 .photo__img {
   display: block;
+  width: 280px;
 
   @media (min-width: $screen-md) {
     width: 100%;

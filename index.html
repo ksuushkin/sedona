@@ -30,7 +30,11 @@
       </nav>
       <div class="page-header__logo-wrapper">
         <a class="page-header__logo" href="index.html">
-          <img src="img/logo-sedona-mobile.svg" width="102" height="84" alt="City of Sedona">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+            <img class="page-header__logo-img" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="City of Sedona">
+          </picture>
         </a>
       </div>
     </header>
@@ -58,9 +62,13 @@
             Седона не аттракцион для туристов, там течет своя жизнь
           </p>
         </div>
-        <picture>
-          <img class="reasons__img" src="img/main-city-mobile@1x.jpg" alt="Настоящий городок">
-        </picture>
+        <div class="reasons__img-wrapper">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg 1x, main-city-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg 1x, main-city-tablet@2x.jpg 2x">
+            <img class="reasons__img" src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" alt="Настоящий городок">
+          </picture>
+        </div>
       </section>
 
       <section class="features">
@@ -92,9 +100,13 @@
             Да, по нему можно пройти!<br class="show-lg"> Если вы осмелитесь, конечно
           </p>
         </div>
-        <picture>
-          <img class="reasons__img" src="img/photo-bridge-mobile@1x.jpg" alt="Мост дьявола">
-        </picture>
+        <div class="reasons__img-wrapper">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, photo-bridge-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, photo-bridge-tablet@2x.jpg 2x">
+            <img class="reasons__img" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="Мост дьявола">
+          </picture>
+        </div>
       </section>
 
       <section class="reasons reasons--gray">
