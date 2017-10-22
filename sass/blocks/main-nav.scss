@@ -88,6 +88,10 @@
 
 .main-nav__list--closed {
   display: none;
+
+  @media (min-width: $screen-md) {
+    display: flex;
+  }
 }
 
 .main-nav__item {

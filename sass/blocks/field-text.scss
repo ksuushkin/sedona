@@ -11,6 +11,7 @@
 .field-text__input {
   box-sizing: border-box;
   width: 100%;
+  min-width: 280px;
   margin: 0 auto;
   padding-top: 17px;
   padding-left: 19px;
@@ -27,9 +28,11 @@
   @media (min-width: $screen-md) {
     margin-top: 8px;
     padding-left: 21px;
+    min-width: 648px;
   }
 
   @media (min-width: $screen-lg) {
     min-height: 160px;
+    min-width: 960px;
   }
 }
