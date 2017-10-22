@@ -1,4 +1,6 @@
 .field-checkbox {
+  position: relative;
+
   @media (min-width: $screen-md) {
     width: 100%;
     order: 4;
@@ -8,6 +10,35 @@
 
   @media (min-width: $screen-lg) {
     margin-bottom: 18px;
+  }
+
+  &::before,
+  &::after {
+    @media (min-width: $screen-md) {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 126px;
+      background: $gray;
+      top: 46px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 278px;
+      top: 43px;
+    }
+  }
+
+  &::before {
+    @media (min-width: $screen-md) {
+      left: 0;
+    }
+  }
+
+  &::after {
+    @media (min-width: $screen-md) {
+      right: 0;
+    }
   }
 }
 

@@ -1,12 +1,43 @@
 .field-text {
   margin-bottom: 29px;
+  position: relative;
 
   @media (min-width: $screen-md) {
     width: 100%;
     order: 5;
     margin-bottom: 51px;
   }
+
+  &::before,
+  &::after {
+    @media (min-width: $screen-md) {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 126px;
+      background: $gray;
+      top: 33px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 278px;
+    }
+  }
+
+  &::before {
+    @media (min-width: $screen-md) {
+      left: 0;
+    }
+  }
+
+  &::after {
+    @media (min-width: $screen-md) {
+      right: 0;
+    }
+  }
 }
+
+
 
 .field-text__input {
   box-sizing: border-box;

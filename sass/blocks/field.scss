@@ -5,6 +5,59 @@
   }
 }
 
+.field--intro {
+  position: relative;
+
+  &::after {
+    @media (min-width: $screen-md) {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 294px;
+      background: $gray;
+      top: 25px;
+      left: -60px;
+    }
+
+    @media (min-width: $screen-lg) {
+      left: -82px;
+    }
+  }
+}
+
+.field--contact {
+  position: relative;
+
+  &::before,
+  &::after {
+    @media (min-width: $screen-md) {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 126px;
+      background: $gray;
+      top: 65px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 278px;
+      top: 63px;
+    }
+  }
+
+  &::before {
+    @media (min-width: $screen-md) {
+      left: 0;
+    }
+  }
+
+  &::after {
+    @media (min-width: $screen-md) {
+      right: 0;
+    }
+  }
+}
+
 .field__inner {
   margin-bottom: 16px;
   margin-right: 18px;
