@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HTML Academy: Седона</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body class="page">
-  <header class="page-header">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body class="page">
+    <header class="page-header">
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
+        <button class="main-nav__toggler  js-menu-button" type="button">
+          <span></span>
+          <p class="visually-hidden">Открыть меню</p>
         </button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__item--active">
+        <ul class="main-nav__list js-menu-list">
+          <li class="main-nav__item">
             <a href="index.html">Главная</a>
           </li>
           <li class="main-nav__item">
             <a href="photo.html">Фото и видео</a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__item--active">
             <a>Форма отзыва</a>
           </li>
           <li class="main-nav__item">
@@ -50,9 +51,11 @@
       <form class="form" action="https://echo.htmlacademy.ru/" method="post">
         <fieldset class="form__field field field--intro">
           <div class="field__inner">
-            <legend class="field__caption">
-              Представьтесь:
-            </legend>
+            <div class="field__caption-wrapper">
+              <legend class="field__caption">
+                Представьтесь:
+              </legend>
+            </div>
             <div class="field__item field__item--inline">
               <label class="field__name" for="name">Имя*:</label>
               <input class="field__input" id="name" type="text" placeholder="Петр">
@@ -66,43 +69,50 @@
               <input class="field__input" id="patronymic" type="text" placeholder="Александрович">
             </div>
           </div>
-
         </fieldset>
 
         <fieldset class="form__field field field--contact">
-          <legend class="field__caption">
-            Контактная информация:
-          </legend>
           <div class="field__inner field__inner--contact">
-            <div class="field__item field__item--contact">
-              <label class="field__name" for="tel"><span class="field__name-hidden">Контактный </span>телефон*:</label>
-              <input class="field__input field__input--phone" id="tel" type="tel" placeholder="Введите телефон">
+            <div class="field__caption-wrapper field__caption-wrapper--contact">
+              <legend class="field__caption field__caption--contact">
+                Контактная информация:
+              </legend>
             </div>
             <div class="field__item field__item--contact">
-              <label class="field__name" for="email">Электронная почта*:</label>
-              <input class="field__input field__input--email" id="email" type="email" placeholder="Введите e-mail">
+              <label class="field__name field__name--contact" for="tel"><span class="field__name-hidden">Контактный </span>телефон*:</label>
+              <div class="field__input-wrapper field__input-wrapper--phone">
+                <input class="field__input field__input--contact" id="tel" type="tel" placeholder="Введите телефон">
+              </div>
+            </div>
+            <div class="field__item field__item--contact">
+              <label class="field__name field__name--contact" for="email">Электронная почта*:</label>
+              <div class="field__input-wrapper field__input-wrapper--email">
+                <input class="field__input field__input--contact" id="email" type="email" placeholder="Введите e-mail">
+              </div>
             </div>
           </div>
         </fieldset>
 
         <fieldset class="form__field field field-radio">
-          <legend class="field__caption">
-            Ваше общее впечатление:
-          </legend>
+          <div class="field__caption-wrapper">
+            <legend class="field__caption field__caption--radio">
+              Ваше общее впечатление:
+            </legend>
+          </div>
           <div class="field__inner">
-            <div class="field__item">
+            <div class="field__item field__item--radio">
               <label class="field-radio__name">
                 <input class="field-radio__input" type="radio" name="rating" checked>
                 <span class="field-radio__name-text">Скорее положительное</span>
               </label>
             </div>
-            <div class="field__item">
+            <div class="field__item field__item--radio">
               <label class="field-radio__name">
                 <input class="field-radio__input" type="radio" name="rating">
                 <span class="field-radio__name-text">Скорее отрицательное</span>
               </label>
             </div>
-            <div class="field__item">
+            <div class="field__item field__item--radio">
               <label class="field-radio__name">
                 <input class="field-radio__input" type="radio" name="rating">
                 <span class="field-radio__name-text">Затрудняюсь ответить</span>
@@ -112,9 +122,11 @@
         </fieldset>
 
         <fieldset class="form__field field field-checkbox">
-          <legend class="field__caption">
-            Посещенные достопримечательности:
-          </legend>
+          <div class="field__caption-wrapper field__caption-wrapper--checkbox">
+            <legend class="field__caption field__caption--checkbox">
+              Посещенные<br class="show-md"> достопримечательности:
+            </legend>
+          </div>
           <div class="field__inner field__inner--checkbox">
             <div class="field__item field__item--checkbox">
               <label class="field-checkbox__name">
@@ -144,20 +156,22 @@
         </fieldset>
 
         <fieldset class="form__field field field-text">
-          <legend class="field__caption">
-            Опишите свои эмоции
-          </legend>
+          <div class="field__caption-wrapper">
+            <legend class="field__caption field__caption--text">
+              Опишите свои эмоции
+            </legend>
+          </div>
           <div class="field__inner">
             <label class="field-text__name">
-              <textarea class="field-text__input" cols="30" rows="6">Опишите подробно все свои восторги</textarea>
+              <textarea class="field-text__input" cols="30" rows="4" placeholder="Опишите подробно все свои восторги"></textarea>
             </label>
           </div>
         </fieldset>
 
         <div class="form__actions">
           <button class="btn" type="submit">Отправить отзыв</button>
+          <p class="form__required">* — обязательные поля</p>
         </div>
-        <p class="form__required">*-обязательные поля</p>
       </form>
     </main>
 
@@ -183,20 +197,23 @@
         </a>
       </div>
     </footer>
-    <div class="modal">
+    <div class="modal modal--failure">
       <h2 class="modal__title">Что-то пошло не так!</h2>
       <p class="modal__text">
         Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
       </p>
-      <button class="modal__btn btn">Ok</button>
+      <button class="modal__btn btn modal__btn--failure">Ok</button>
     </div>
-    <div class="modal">
+    <div class="modal modal--success">
       <h2 class="modal__title">Ваш отзыв отправлен!</h2>
       <p class="modal__text">
-        Спасибо за ваше участие, ваш отзыв уже поступил к нам.
+        Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br>
         В ближайшее время мы опубликуем его на сайте.
       </p>
-      <button class="modal__btn btn">Закрыть окно</button>
+      <div class="modal__btn-wrapper">
+        <button class="modal__btn btn">Закрыть окно</button>
+      </div>
     </div>
+    <script src="/js/script.js"></script>
 </body>
 </html>

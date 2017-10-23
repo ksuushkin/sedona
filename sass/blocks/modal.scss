@@ -1,5 +1,21 @@
 .modal {
   text-align: center;
+  display: none;
+  position: fixed;
+  width: 320px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 30px;
+  background-color: $white;
+  border-bottom: 1px solid $gray;
+  box-shadow: 0 2px 17px 0 rgba(50, 50, 50, 0.75);
+}
+
+.modal--success {
+  @media (min-width: $screen-md) {
+    width: 648px;
+  }
 }
 
 .modal__title {
@@ -7,8 +23,35 @@
   font-weight: 700;
   line-height: 26px;
   color: $black;
+
+  @media (min-width: $screen-md) {
+    font-size: $font-giant;
+    line-height: 40px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
 }
 
 .modal__text {
   line-height: 24px;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-bottom: 10px;
+
+  @media (min-width: $screen-md) {
+    font-size: $font-small;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.modal__btn--failure {
+  min-width: 180px;
+  margin-bottom: 30px;
+}
+
+.modal__btn-wrapper {
+  background-color: $gray--light;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }

@@ -1,5 +1,4 @@
 .main-nav {
-  position: relative;
   width: 320px;
   text-align: center;
 
@@ -12,19 +11,62 @@
   }
 }
 
-.main-nav__toggle {
+.main-nav__toggler {
   position: absolute;
+  display: flex;
+  align-items: center;
   top: 16px;
   right: 20px;
   height: 23px;
-  width: 23px;
+  width: 35px;
   z-index: 10;
   border: none;
-  background-color: $white;
+  background-color: transparent;
   cursor: pointer;
+  outline: none;
 
   @media (min-width: $screen-md) {
     display: none;
+  }
+}
+
+.main-nav__toggler span {
+  display: inline-block;
+  vertical-align: bottom;
+  position: relative;
+  width: 100%;
+  height: 3px;
+  background: $white;
+  border-radius: 2px;
+
+
+  &::before,
+  &::after {
+    width: 100%;
+    height: 3px;
+    background: $white;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    content: "";
+    transform-origin: 50% 50%;
+  }
+
+  &::before {
+    top: 8px;
+  }
+
+  &::after {
+    top: -8px;
+  }
+}
+
+.main-nav__toggler--closed span {
+  background: $blue;
+
+  &::before,
+  &::after {
+    background: $blue;
   }
 }
 
@@ -41,6 +83,14 @@
     flex-direction: row;
     justify-content: space-between;
     background-color: $white;
+  }
+}
+
+.main-nav__list--closed {
+  display: none;
+
+  @media (min-width: $screen-md) {
+    display: flex;
   }
 }
 
@@ -84,13 +134,44 @@
     color: $black;
     border: none;
   }
+}
 
-  &:hover {
-    background-color: $blue--dark;
+.main-nav__item a:hover {
+  background-color: $blue--dark;
+
+  @media (min-width: $screen-md) {
+    background-color: $white;
+    color: $blue;
   }
+}
 
-  &:active {
-    color: #88b6d1;
-    background-color: $blue--darker;
+.main-nav__item a:active {
+  color: #88b6d1;
+  background-color: $blue--darker;
+
+
+  @media (min-width: $screen-md) {
+    background-color: $white;
+    color: $gray;
+  }
+}
+
+.main-nav__item--active a {
+  @media (min-width: $screen-md) {
+    color: #766357;
+    cursor: default;
+  }
+}
+
+.main-nav__item--active a:hover {
+  @media (min-width: $screen-md) {
+    color: #604e43;
+  }
+}
+
+.main-nav__item--active a:active {
+  @media (min-width: $screen-md) {
+    color: #766357;
+    opacity: 0.3;
   }
 }

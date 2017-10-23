@@ -1,7 +1,44 @@
 .field-checkbox {
+  position: relative;
+
   @media (min-width: $screen-md) {
     width: 100%;
     order: 4;
+    margin-top: 5px;
+    margin-bottom: 21px;
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-bottom: 18px;
+  }
+
+  &::before,
+  &::after {
+    @media (min-width: $screen-md) {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 126px;
+      background: $gray;
+      top: 46px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 278px;
+      top: 43px;
+    }
+  }
+
+  &::before {
+    @media (min-width: $screen-md) {
+      left: 0;
+    }
+  }
+
+  &::after {
+    @media (min-width: $screen-md) {
+      right: 0;
+    }
   }
 }
 
@@ -18,13 +55,22 @@
 }
 
 .field-checkbox__name-text {
-  margin-left: 15px;
+  margin-left: 24px;
   text-transform: none;
   font-family: $font-family;
   font-size: $font-normal;
   font-weight: 700;
   line-height: 26px;
   color: $black;
+
+  @media (min-width: $screen-md) {
+    margin-left: 29px;
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-left: 28px;
+    margin-right: 2px;
+  }
 
   &::before {
     content: "";
@@ -36,4 +82,23 @@
     left: 0;
     background-color: $gray--lighter;
   }
+
+  &::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    display: block;
+    width: 12px;
+    height: 22px;
+    top: 14px;
+    left: 22px;
+    border-top: 3px solid $black;
+    border-left: 3px solid $black;
+    transform: rotate(-135deg);
+    opacity: 0;
+  }
+}
+
+.field-checkbox__input:checked + .field-checkbox__name-text::after {
+  opacity: 1;
 }
